@@ -1,0 +1,19 @@
+# https://docs.github.com/en/code-security/dependabot
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  # only open security update PRs (see linked docs for explanation of `open-pull-requests-limit: 0`)
+  #  https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#open-pull-requests-limit
+  - package-ecosystem: "gomod"
+    open-pull-requests-limit: 0
+    directory: "/components/notebook-controller/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "gomod"
+    open-pull-requests-limit: 0
+    directory: "/components/odh-notebook-controller/"
+    schedule:
+      interval: "weekly"
